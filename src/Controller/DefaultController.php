@@ -15,7 +15,6 @@ class DefaultController extends AbstractController
     {   
         $films = $entityManager->getRepository(Film::class)->findAll();
         
-        //On passe le variable $employes a render Twig pour les afficher
         return $this->render('default/home.html.twig', [
             'films' => $films
         ]);
